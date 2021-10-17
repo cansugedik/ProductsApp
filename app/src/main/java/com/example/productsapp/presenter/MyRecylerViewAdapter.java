@@ -1,4 +1,4 @@
-package com.example.productsapp.utils;
+package com.example.productsapp.presenter;
 
 import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.productsapp.R;
+import com.example.productsapp.model.ProductModel;
 import com.example.productsapp.ui.ProductsActivity;
 
 import java.util.ArrayList;

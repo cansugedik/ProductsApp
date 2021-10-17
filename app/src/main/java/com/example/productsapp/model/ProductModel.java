@@ -1,4 +1,4 @@
-package com.example.productsapp.utils;
+package com.example.productsapp.model;
 
 public class ProductModel {
     //Ürünün girildiği alan ( Ürün kategorisi, fiyatı, başlığı, açıklaması ve eklenme tarihi vb. Alanlar)

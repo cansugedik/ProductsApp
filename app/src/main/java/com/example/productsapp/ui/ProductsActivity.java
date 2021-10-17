@@ -15,10 +15,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.productsapp.DAOProduct;
+import com.example.productsapp.presenter.DAOProduct;
 import com.example.productsapp.R;
-import com.example.productsapp.utils.MyRecylerViewAdapter;
-import com.example.productsapp.utils.ProductModel;
+import com.example.productsapp.presenter.MyRecylerViewAdapter;
+import com.example.productsapp.model.ProductModel;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
