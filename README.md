@@ -17,4 +17,6 @@
 
 ![1](https://user-images.githubusercontent.com/35520725/137643739-a986ad6d-8646-46fa-a463-0e9a3bc843cf.png)
 
+5-Uygulama geliştirilmeye devam edelicektir
 
+**Mobiroller | Android/iOS Mobile Developer Ödevi
