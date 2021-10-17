@@ -1,12 +1,15 @@
 package com.example.productsapp.presenter;
 
 import android.annotation.SuppressLint;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,7 +20,7 @@ import com.example.productsapp.ui.ProductsActivity;
 
 import java.util.ArrayList;
 
-public class MyRecylerViewAdapter extends RecyclerView.Adapter<MyRecylerViewAdapter.MyViewHolder> {
+public class MyRecylerViewAdapter extends RecyclerView.Adapter<MyRecylerViewAdapter.MyViewHolder>{
 
     private ArrayList<ProductModel> products;
 
@@ -66,6 +69,12 @@ public class MyRecylerViewAdapter extends RecyclerView.Adapter<MyRecylerViewAdap
             if (products.size() != 0)
                 pActivity.deleteModelDatabase("delete", products.get(position).getProductId());
         });
+
+        holder.linearlayoutRecyclerview.setOnClickListener(view -> {
+                pActivity.productDetailDialog(position);
+        });
+
+
     }
 
     @Override
@@ -81,6 +90,8 @@ public class MyRecylerViewAdapter extends RecyclerView.Adapter<MyRecylerViewAdap
 
         public ImageView imgviewProduct;
 
+        LinearLayout linearlayoutRecyclerview;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             tvProductId = itemView.findViewById(R.id.tvProductId);
@@ -89,6 +100,7 @@ public class MyRecylerViewAdapter extends RecyclerView.Adapter<MyRecylerViewAdap
             tvDescription = itemView.findViewById(R.id.tvDescription);
             tvPrice = itemView.findViewById(R.id.tvPrice);
             imgviewProduct = itemView.findViewById(R.id.imgviewProduct);
+            linearlayoutRecyclerview = itemView.findViewById(R.id.linearlayoutRecyclerview);
 
             btnProductUpdate = itemView.findViewById(R.id.btnProductUpdate);
             btnProductDelete = itemView.findViewById(R.id.btnProductDelete);

@@ -93,28 +93,7 @@ public class ProductsActivity extends Activity {
                     productList, productAdapter);
         });
 
-        recyclerviewProduct.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
-            @Override
-            public boolean onInterceptTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
-                if(e.getAction() == MotionEvent.ACTION_UP)
-                   productDetailDialog(pPosition);
-
-                return false;
-            }
-
-            @Override
-            public void onTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
-
-            }
-
-            @Override
-            public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
-
-            }
-        });
-
     }
-
 
     public void productDetailDialog(int pos) {
         View dialogView = View.inflate(this, R.layout.dialog_product_detail, null);

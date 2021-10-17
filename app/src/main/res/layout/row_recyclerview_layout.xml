@@ -40,6 +40,7 @@
                     android:textSize="15sp" />
 
                 <LinearLayout
+                    android:id="@+id/linearlayoutRecyclerview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
